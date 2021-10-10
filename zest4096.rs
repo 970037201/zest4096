@@ -26,9 +26,9 @@ fn eighth_round(e: (usize, usize, usize, usize, usize, usize, usize, usize), x: 
     x[e.5] = rotl(x[e.5] ^ x[e.6], 5);
 }
 
-pub fn zest_hash(input: [u64; 64]) -> [u64; 64] {
+pub fn zest4096(input: [u64; 64]) -> [u64; 64] {
     let mut x = input;
-    for _ in 0..48 {
+    for _ in 0..32 {
         // Odd round (columns)
         eighth_round((0, 8, 16, 24, 32, 40, 48, 56), &mut x);
         eighth_round((1, 9, 17, 25, 33, 41, 49, 57), &mut x);
