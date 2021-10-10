@@ -20,7 +20,7 @@ void zest4096(uint64_t out[64], const uint64_t in[64]) {
 	for (int i = 0; i < 64; ++i)
 		x[i] = in[i];
 	// Perform 48 * 2 rounds
-	for (uint32_t i = 0; i < 48; i++) {
+	for (uint32_t i = 0; i < 32; i++) {
 		// Odd round (columns)
 		RE(x[0], x[ 8], x[16], x[24], x[32], x[40], x[48], x[56]);
 		RE(x[1], x[ 9], x[17], x[25], x[33], x[41], x[49], x[57]);
