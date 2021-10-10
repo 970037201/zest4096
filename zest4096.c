@@ -4,13 +4,13 @@
 #define ROTL(a, b) (((a) << (b)) | ((a) >> (64 - (b))))
 // Perform an eighth of a round
 #define RE(a, b, c, d, e, f, g, h) (	\
-a += b, h = ROTL(h ^ a, 32), 			\
-c += d, b = ROTL(b ^ c, 28), 			\
-e += f, d = ROTL(d ^ e, 24), 			\
-g += h, f = ROTL(f ^ g, 21),			\
-a += b, h = ROTL(h ^ a, 16), 			\
-c += d, b = ROTL(b ^ c, 12), 			\
-e += f, d = ROTL(d ^ e,  8), 			\
+a += b, h = ROTL(h ^ a, 32), 		\
+c += d, b = ROTL(b ^ c, 28), 		\
+e += f, d = ROTL(d ^ e, 24), 		\
+g += h, f = ROTL(f ^ g, 21),		\
+a += b, h = ROTL(h ^ a, 16), 		\
+c += d, b = ROTL(b ^ c, 12), 		\
+e += f, d = ROTL(d ^ e,  8), 		\
 g += h, f = ROTL(f ^ g,  5))
 
 // Input and Output block size of 64 * 64, or 4096 bits (512 bytes)
