@@ -42,5 +42,5 @@ void zest4096(uint64_t out[64], const uint64_t in[64]) {
 	}
 	// Add to original input
 	for (int i = 0; i < 64; ++i)
-		out[i] = x[i] + in[i];
+		out[i] = x[i] ^ in[i];
 }
