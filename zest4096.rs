@@ -49,7 +49,7 @@ pub fn zest4096(input: [u64; 64]) -> [u64; 64] {
         eighth_round((7, 8, 17, 26, 35, 44, 53, 62), &mut x);
     }
     for (i, elem) in x.iter_mut().enumerate() {
-        *elem += input[i]
+        *elem ^= input[i]
     }
     x
 }
